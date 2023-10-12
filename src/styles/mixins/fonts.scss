@@ -1,0 +1,12 @@
+@mixin poppins($weight: 300) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin kenia {
+  font-family: 'Kenia', sans-serif;
+}
+
+@mixin noto-sans-jp {
+  font-family: 'Noto Sans JP', sans-serif;
+}

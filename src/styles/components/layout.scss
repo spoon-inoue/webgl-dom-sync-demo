@@ -1,0 +1,74 @@
+@use '../mixins/fonts.scss';
+@use '../mixins/svg.scss';
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .viewer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    & + .viewer {
+      border-left: 1px dashed #f008;
+    }
+  }
+
+  .area {
+    width: 80%;
+    aspect-ratio: 1;
+    // border: 1px solid greenyellow;
+    overflow: hidden;
+  }
+
+  .viewer.left > .area {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .viewer.center > .area {
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .viewer.right > .area {
+    // display: grid;
+    // place-items: center;
+    padding-inline: 3rem;
+    padding-top: 3rem;
+    color: #fff;
+    @include fonts.kenia;
+    font-size: 5rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+
+    ul {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      @include fonts.noto-sans-jp;
+      li {
+        margin-top: 1rem;
+        line-height: 1.5;
+        display: grid;
+        grid-template-columns: 2rem 1fr;
+
+        .dot {
+          margin-top: 0.7rem;
+          @include svg.list-circle;
+          width: 1rem;
+        }
+      }
+    }
+  }
+}

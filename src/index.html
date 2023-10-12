@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="stylesheet" href="./styles/entry.scss" />
+    <script src="./scripts/entry.ts" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <div class="layout">
+        <div class="viewer left">
+          <div class="area">
+            <img src="images/text.jpg" alt="" />
+          </div>
+        </div>
+        <div class="viewer center">
+          <div class="area">
+            <video src="videos/12_dot.mp4" muted loop playsinline></video>
+          </div>
+        </div>
+        <div class="viewer right">
+          <div class="area">
+            <p>
+              DOT BUSTER<br />
+              × DOT FORCE
+            </p>
+            <ul>
+              <li>
+                <span class="dot"></span>
+                <p>化粧品ブランドサイト。</p>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <p>ビビットな配色に合うメリハリの聞いた演出計画。</p>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <p>スクロールに合わせてそれぞれの要素が個気味良く表出。</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <canvas class="webgl-canvas"></canvas>
+      <a class="link" href="https://github.com/nemutas/webgl-dom-sync-demo" target="_blank" rel="noopener noreferrer">Github</a>
+      <p class="fps">75</p>
+    </main>
+  </body>
+</html>
