@@ -21,9 +21,9 @@ void main() {
   vec2 aber = normal.xy * fresnel * 0.007;
 
   vec3 offscreen;
-  offscreen.r = texture2D(tOffscreen, screenUv + refr - aber).r;
-  offscreen.g = texture2D(tOffscreen, screenUv + refr).g;
-  offscreen.b = texture2D(tOffscreen, screenUv + refr + aber).b;
+  offscreen.r = texture2D(tOffscreen, screenUv - refr - aber).r;
+  offscreen.g = texture2D(tOffscreen, screenUv - refr).g;
+  offscreen.b = texture2D(tOffscreen, screenUv - refr + aber).b;
 
   vec3 color = offscreen;
   color = mix(color, normal, fresnel * 0.1);

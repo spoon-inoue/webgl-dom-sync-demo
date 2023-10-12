@@ -7,7 +7,7 @@ import vertexShader from './shader/vertexShader.glsl'
 import html2canvas from 'html2canvas'
 
 export class Offscreen {
-  private renderTarget = new THREE.WebGLRenderTarget(three.size.width, three.size.height, { colorSpace: THREE.SRGBColorSpace })
+  private renderTarget = new THREE.WebGLRenderTarget(three.size.width, three.size.height)
   private scene = new THREE.Scene()
   private camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.01, 10)
   private planes = new THREE.Group()
